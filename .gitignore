@@ -128,3 +128,104 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+
+# Node.js #
+###########
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Dependency lock files #
+##########################
+yarn.lock
+package-lock.json
+
+# Editor config files #
+#######################
+.vscode/
+.idea/
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+*.db
+
+# Compiled files #
+##################
+dist/
+build/
+out/
+
+# Environment files #
+#####################
+.env
+.env.local
+.env.*.local
+.env.test
+.env.development
+.env.production
+
+# Cache and temporary files #
+#############################
+.cache/
+.temp/
+*.swp
+*.swo
+*.bak
+
+# macOS #
+#########
+*.DS_Store
+
+# Webpack #
+###########
+webpack.config.js
+
+# Jest #
+#######
+coverage/
+
+# Cypress #
+###########
+cypress/screenshots/
+cypress/videos/
+
+# Visual Studio Code #
+######################
+.vscode/
+
+# Logs #
+########
+*.log
+
+# Operating System Files #
+##########################
+.DS_Store
+Thumbs.db
+
+# Temporary Files #
+####################
+*.swp
+*.~*
+
+# Compiled Python files #
+##########################
+*.pyc
+
+# Compiled Java files #
+########################
+*.class
+
+# Compiled Ruby files #
+########################
+*.rb[co]
+
+# Compiled Node.js files #
+###########################
+node_modules/

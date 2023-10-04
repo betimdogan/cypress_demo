@@ -1,0 +1,22 @@
+{
+  "validUser": {
+    "username": "betim",
+    "password": "Betim@123"
+  },
+  "incorrectUsername": {
+    "username": "betimddddd",
+    "password": "Betim@123"
+  },
+  "incorrectPassword": {
+    "username": "betim",
+    "password": "Betim@1"
+  },
+  "emptyUsername": {
+    "username": " ",
+    "password": "Betim@123"
+  },
+  "emptyPassword": {
+    "username": "betim",
+    "password": ""
+  }
+}
