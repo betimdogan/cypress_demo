@@ -4,6 +4,7 @@ export const loginPageElements = {
     passwordInput: '#password',
     userNameText: '#userName-value',
     errorMessage: '#output p#name',
+    logoutButton: '#books-wrapper > .text-right > #submit',
 };
 
 

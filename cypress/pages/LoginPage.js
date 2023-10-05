@@ -39,6 +39,11 @@ class LoginPage {
     this.verifyUserNameText('betim');
   }
 
+  logout() {
+    cy.get(loginPageElements.logoutButton).click();
+    cy.get(loginPageElements.loginButton).should('exist');
+  }
+
 }
 
 export default LoginPage;

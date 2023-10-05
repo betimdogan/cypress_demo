@@ -11,7 +11,9 @@ class Commons {
   }
 
   openLoginPage(){
+    cy.viewport(1920, 1080);
     this.visit();
+    cy.wait(3000);
     this.verifyMainHeaderText('Login');
   }
 

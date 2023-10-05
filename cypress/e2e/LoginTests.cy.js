@@ -14,10 +14,15 @@ describe('Login Test Cases', () => {
 
 
   beforeEach(() => {
+    commons.openLoginPage();
     cy.fixture('users.json').then((loadedUsers) => {
       users = loadedUsers;  // Assign the loaded users data to the variable
     });
-    commons.openLoginPage();
+  });
+
+  afterEach(() => {
+    cy.clearCookies();
+    cy.clearLocalStorage();
   });
 
   it('Test Case 1: Verify successful login with correct username and password', () => {
@@ -26,7 +31,6 @@ describe('Login Test Cases', () => {
     }
 
     const { username, password } = users.validUser;
-    commons.verifyMainHeaderText('Login');
     loginPage.enterUsername(username);
     loginPage.enterPassword(password);
     loginPage.clickLoginButton();
@@ -39,7 +43,6 @@ describe('Login Test Cases', () => {
     }
 
     const { username, password } = users.incorrectUsername;
-    commons.verifyMainHeaderText('Login');
     loginPage.enterUsername(username);
     loginPage.enterPassword(password);
     loginPage.clickLoginButton();
@@ -53,7 +56,6 @@ describe('Login Test Cases', () => {
     }
 
     const { username, password } = users.incorrectPassword;
-    commons.verifyMainHeaderText('Login');
     loginPage.enterUsername(username);
     loginPage.enterPassword(password);
     loginPage.clickLoginButton();
@@ -67,7 +69,6 @@ describe('Login Test Cases', () => {
     }
 
     const { username, password } = users.emptyUsername;
-    commons.verifyMainHeaderText('Login');
     loginPage.enterPassword(password);
     loginPage.clickLoginButton();
     loginPage.verifyEmptyUsernameError();
@@ -80,11 +81,15 @@ describe('Login Test Cases', () => {
     }
 
     const { username, password } = users.emptyPassword;
-    commons.verifyMainHeaderText('Login');
     loginPage.enterUsername(username);
     loginPage.clickLoginButton();
     loginPage.verifyEmptyPasswordError();
 
+  });
+
+  it('Test Case 6: Verify user can logout successfully', () => {
+    loginPage.login();
+    loginPage.logout();
   });
 
 }); 

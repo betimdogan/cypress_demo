@@ -229,3 +229,7 @@ Thumbs.db
 # Compiled Node.js files #
 ###########################
 node_modules/
+
+# Cypress Mochawesome Reports
+cypress/reports/
+cypress/screenshots/
